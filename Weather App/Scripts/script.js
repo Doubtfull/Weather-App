@@ -1,12 +1,48 @@
 let lon;
 let lat;
-let temperature = document.querySelector(".temp");
-let summary = document.querySelector(".summary");
-let loc = document.querySelector(".location");
-let icon = document.getElementById("weathericon");
-const kelvin = 273;
+const temperature = document.querySelector(".temp");
+const summary = document.querySelector(".summary");
+const loc = document.querySelector(".location");
+const icon = document.querySelector(".weather-icon-holder");
+const clock = document.getElementById("clock");
+const kelvin = 273.15;
+
+function currentTime() {
+    const date = new Date();
+    let hours;
+    let min;
+    let clock12;
+    const cycle = date.getHours();
+
+    if (date.getHours() > 12) {
+        clock12 = date.getHours() - 12;
+    } else {
+        clock12 = date.getHours();
+    }
+
+    if (clock12 < 10) {
+        hours = '0' + clock12;
+    } else {
+        hours = clock12;
+    }
+
+    if (date.getMinutes() < 10) {
+        min = '0' + date.getMinutes();
+    } else {
+        min = date.getMinutes();
+    }
+
+    if (cycle > 12) {
+        clock.innerHTML = hours + ':' + min + ' PM';
+    } else {
+        clock.innerHTML = hours + ':' + min + ' AM';
+    }
+}
+setInterval(currentTime, 1000);
+
 
 window.addEventListener("load", () => {
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
             console.log(position);
@@ -27,9 +63,9 @@ window.addEventListener("load", () => {
                     console.log(data);
                     temperature.textContent = Math.floor(data.main.temp - kelvin) + "°C";
                     summary.textContent = data.weather[0].description;
-                    loc.textContent = data.name + "," + data.sys.country;
-                    let icon1 = data.weather[0].icon;
-                    icon.innerHTML = `<img src="icons/${icon1}.svg" style= 'height:10rem'/>`;
+                    loc.textContent = data.name + ", " + data.sys.country;
+                    const icon1 = data.weather[0].icon;
+                    icon.innerHTML = `<img class="weather-icon" src="icons/${icon1}.png">`;
                 });
         });
     }

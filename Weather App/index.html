@@ -5,16 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles/general.css">
     <link rel="stylesheet" href="Styles/main.css">
-    
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <title>Weather App</title>
 </head>
 <body>
-    <div class="container">
-        <div class="weather icon" id="weathericon">---</div>
-        <div class="temp">-°C</div>
-        <div class="summary">----</div>
-        <div class="location"></div>
+    <section class="container">
+        <div class="time-and-location">
+            <div class="location"></div>
+            <div id="clock"></div>
+        </div>
+        
+        <div class="current-forcast">
+            <div class="weather-icon-holder"><img class="weather-icon" src="icons/unknown.png"></div>
+            <div class="temp">-°C</div>
+        </div>
+    </section>
+
+
+    <div class="hide">
+        <section class="header">
+            <div class="title">SkySense</div>
+        </section>
+        <div class="container">
+            <div class="temp">-°C</div>
+            <div class="summary">----</div>
+            
+        </div>
     </div>
+
     <script src="Scripts/script.js"></script>
 </body>
 </html>

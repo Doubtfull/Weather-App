@@ -1,11 +1,48 @@
 .container {
-    height: 400px;
-    border: black solid;
-    width: 300px;
+    border: rgba(255, 255, 255, 0.37) solid;
+    border-radius: 15px;
     display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.time-and-location {
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 15px;
-    background-color: rgb(43, 160, 255);
+    align-items: center;
+    margin-top: 30px;
+}
+
+#clock, .location {
+    font-size: 20px;
+}
+
+.current-forcast {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.weather-icon-holder {
+    margin-right: 20px;
+}
+
+.weather-icon {
+    width: 100px;
+}
+
+.temp {
+    font-size: 40px;
 }
