@@ -59,7 +59,7 @@ window.addEventListener("load", () => {
             const api = "0e5739d36c0bdf76e501b8d729c1fc16";
 
             //API URL
-            const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&` + `lon=${lon}&appid=${api}`;
+            const base = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=${lat}&` + `lon=${lon}&appid=${api}`;
 
             //Fetching the API
             fetch(base)
