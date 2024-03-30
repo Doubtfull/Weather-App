@@ -4,6 +4,13 @@ const temperature = document.querySelector(".temp");
 const summary = document.querySelector(".summary");
 const loc = document.querySelector(".location");
 const icon = document.querySelector(".weather-icon-holder");
+const feelslike = document.querySelector(".feelslike");
+const maxtemp = document.querySelector(".maxtemp");
+const mintemp = document.querySelector(".mintemp");
+const humidity = document.querySelector(".humidity");
+const pressure = document.querySelector(".pressure");
+const visibility = document.querySelector(".visibility");
+const windspeed = document.querySelector(".windspeed");
 const clock = document.getElementById("clock");
 const kelvin = 273.15;
 
@@ -62,6 +69,13 @@ window.addEventListener("load", () => {
                 .then((data) => {
                     console.log(data);
                     temperature.textContent = Math.floor(data.main.temp - kelvin) + "°C";
+                    feelslike.textContent = Math.floor(data.main.feels_like - kelvin) + "°C";
+                    maxtemp.textContent = Math.floor(data.main.temp_max - kelvin) + "°C";
+                    mintemp.textContent = Math.floor(data.main.temp_min - kelvin) + "°C";
+                    humidity.textContent = data.main.humidity + '%';
+                    pressure.textContent = data.main.pressure + ' mb';
+                    visibility.textContent = Math.floor(data.visibility / 1000).toFixed(1) + ' km';
+                    windspeed.textContent = (Math.round(parseFloat(data.wind.speed) * 10) / 10).toFixed(1) + ' m/s'
                     summary.textContent = data.weather[0].description;
                     loc.textContent = data.name + ", " + data.sys.country;
                     const icon1 = data.weather[0].icon;
