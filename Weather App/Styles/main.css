@@ -46,6 +46,10 @@
     font-size: 40px;
 }
 
+.summary {
+    text-align: center;
+}
+
 .extra-info {
     width: 75vw;
     height: 300px;

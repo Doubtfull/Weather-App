@@ -1,0 +1,37 @@
+{
+    "name": "Ayo's Weather App",
+    "short_name": "Weather",
+    "description": "A weather app created by Ayomide Abraham",
+    "start_url": ".",
+    "theme_color": "#4287f5",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "icons":[
+      {
+        "src":"App Pictures/Thumbnail.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src":"App Pictures/Thumbnail2.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+
+    "screenshots": [
+        {
+            "src": "App Pictures/App Screenshot.png",
+            "sizes": "429x888",
+            "type": "image/gif",
+            "form_factor": "wide",
+            "label": "Wonder Widgets"
+        },
+        {
+            "src": "App Pictures/App Screenshot.png",
+            "sizes": "429x888",
+            "type": "image/gif",
+            "label": "Wonder Widgets"
+        }
+    ]
+  }
