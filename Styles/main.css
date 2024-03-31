@@ -62,7 +62,7 @@
     justify-content: space-evenly;
 }
 
-#divider {
+.divider {
     font-size: 24px;
     display: flex;
     flex-direction: row;
