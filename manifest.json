@@ -1,6 +1,6 @@
 {
     "name": "Ayo's Weather App",
-    "short_name": "Weather",
+    "short_name": "Ayo's Weather",
     "description": "A weather app created by Ayomide Abraham",
     "start_url": ".",
     "theme_color": "#4287f5",
